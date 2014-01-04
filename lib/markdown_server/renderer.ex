@@ -9,8 +9,8 @@ defmodule MarkdownServer.Renderer do
 
   For example:
 
-  iex> MarkdownServer.Renderer.render_string("seriously")
-  MarkdownServer.RenderedDocument[body: "<p>seriously</p>\n", title: "Untitled Document"]
+      iex> MarkdownServer.Renderer.render_string("seriously")
+      MarkdownServer.RenderedDocument[body: "<p>seriously</p>", title: "Untitled Document"]
   """
 
   alias MarkdownServer.RenderedDocument
@@ -31,6 +31,7 @@ defmodule MarkdownServer.Renderer do
   @spec render_string(binary()) :: MarkdownServer.RenderedDocument.new
   def render_string(string) when is_binary(string) do
     body = string |> Markdown.to_html
+    body = Regex.replace(%r/\n/, body, "")
     title = title_for(body)
     RenderedDocument[body: body, title: title]
   end
