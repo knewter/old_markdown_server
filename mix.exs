@@ -25,7 +25,10 @@ defmodule MarkdownServer.Mixfile do
   defp deps do
     [
       { :ex_doc, github: "elixir-lang/ex_doc" },
-      { :cowboy, github: "extend/cowboy" }
+      { :cowboy, github: "extend/cowboy" },
+      { :ibrowse, github: "cmullaparthi/ibrowse" },
+      { :hackney,  github: "benoitc/hackney" },
+      { :weber, github: "0xAX/weber" }
     ]
   end
 end
