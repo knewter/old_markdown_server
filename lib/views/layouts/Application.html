@@ -5,7 +5,10 @@
       <%= @title %>
     </title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <%= style("/public/app.css") %>
+    <%= style("/public/stylesheets/app.css") %>
+    <%= style("/public/stylesheets/highlight/default.css") %>
+    <%= script("/public/javascript/highlight.pack.js") %>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <div id="container">
