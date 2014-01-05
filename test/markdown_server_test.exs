@@ -8,8 +8,7 @@ defmodule MarkdownServerTest do
 
   test "serving up a directory of markdown files" do
     document = fetch_file("test_doc")
-    expected_document = "<html><head><title>This is a test document</title></head><body><h1>This is a test document</h1><p>It has a <a href=\"http://elixirsips.com\">link</a>.</p></body></html>"
-    assert expected_document == document
+    assert Regex.match?(%r/This is a test document/, document)
   end
 
   def fetch_file(path) do

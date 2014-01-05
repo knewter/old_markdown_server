@@ -12,7 +12,11 @@ defmodule MarkdownServer.Mixfile do
   # Configuration for the OTP application
   def application do
     [
-      applications: [:cowboy, :ex_doc],
+      applications: [
+        :cowboy,
+        :ex_doc,
+        :lager
+      ],
       mod: { MarkdownServer, [] }
     ]
   end
