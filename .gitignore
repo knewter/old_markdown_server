@@ -6,3 +6,4 @@ docs
 .sass-cache
 public/css/*
 log/
+releases/

@@ -13,4 +13,5 @@ defmodule MarkdownServer do
   def stop(_state) do
     :ok
   end
+
 end

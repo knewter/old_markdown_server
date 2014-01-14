@@ -1,5 +1,4 @@
 defmodule Config do
-
   def config do
     [webserver:
       [http_host: "localhost",
